@@ -11,7 +11,7 @@
       "task_key": "Bronze_Layer",
       "run_if": "ALL_SUCCESS",
       "notebook_task": {
-        "notebook_path": "/Workspace/E-Commerce Project/Bronze Layer",
+        "notebook_path": "/Workspace/Users/philipe.roc@gmail.com/E-Commerce-Databricks-Project/E-Commerce Project/Bronze Layer",
         "source": "WORKSPACE"
       },
       "timeout_seconds": 0,
@@ -28,7 +28,7 @@
       ],
       "run_if": "ALL_SUCCESS",
       "notebook_task": {
-        "notebook_path": "/Workspace/E-Commerce Project/Persist Bronze Layer",
+        "notebook_path": "/Workspace/Users/philipe.roc@gmail.com/E-Commerce-Databricks-Project/E-Commerce Project/Persist Bronze Layer",
         "source": "WORKSPACE"
       },
       "timeout_seconds": 0,
@@ -45,7 +45,7 @@
       ],
       "run_if": "ALL_SUCCESS",
       "notebook_task": {
-        "notebook_path": "/Workspace/E-Commerce Project/Silver Layer",
+        "notebook_path": "/Workspace/Users/philipe.roc@gmail.com/E-Commerce-Databricks-Project/E-Commerce Project/Silver Layer",
         "source": "WORKSPACE"
       },
       "timeout_seconds": 0,
@@ -62,7 +62,7 @@
       ],
       "run_if": "ALL_SUCCESS",
       "notebook_task": {
-        "notebook_path": "/Workspace/E-Commerce Project/Persist Silver Layer",
+        "notebook_path": "/Workspace/Users/philipe.roc@gmail.com/E-Commerce-Databricks-Project/E-Commerce Project/Persist Silver Layer",
         "source": "WORKSPACE"
       },
       "timeout_seconds": 0,
@@ -79,7 +79,7 @@
       ],
       "run_if": "ALL_SUCCESS",
       "notebook_task": {
-        "notebook_path": "/Workspace/E-Commerce Project/Golden Layer - Sales by Country",
+        "notebook_path": "/Workspace/Users/philipe.roc@gmail.com/E-Commerce-Databricks-Project/E-Commerce Project/Golden Layer - Sales by Country",
         "source": "WORKSPACE"
       },
       "timeout_seconds": 0,
@@ -96,7 +96,7 @@
       ],
       "run_if": "ALL_SUCCESS",
       "notebook_task": {
-        "notebook_path": "/Workspace/E-Commerce Project/Golden Layer - Sales by Month",
+        "notebook_path": "/Workspace/Users/philipe.roc@gmail.com/E-Commerce-Databricks-Project/E-Commerce Project/Golden Layer - Sales by Month",
         "source": "WORKSPACE"
       },
       "timeout_seconds": 0,
@@ -113,7 +113,7 @@
       ],
       "run_if": "ALL_SUCCESS",
       "notebook_task": {
-        "notebook_path": "/Workspace/E-Commerce Project/Golden Layer - Top Customers",
+        "notebook_path": "/Workspace/Users/philipe.roc@gmail.com/E-Commerce-Databricks-Project/E-Commerce Project/Golden Layer - Top Customers",
         "source": "WORKSPACE"
       },
       "timeout_seconds": 0,
