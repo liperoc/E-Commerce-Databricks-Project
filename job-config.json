@@ -1,0 +1,129 @@
+{
+  "name": "E-Commerce Project",
+  "email_notifications": {
+    "no_alert_for_skipped_runs": false
+  },
+  "webhook_notifications": {},
+  "timeout_seconds": 0,
+  "max_concurrent_runs": 1,
+  "tasks": [
+    {
+      "task_key": "Bronze_Layer",
+      "run_if": "ALL_SUCCESS",
+      "notebook_task": {
+        "notebook_path": "/Workspace/E-Commerce Project/Bronze Layer",
+        "source": "WORKSPACE"
+      },
+      "timeout_seconds": 0,
+      "email_notifications": {},
+      "webhook_notifications": {},
+      "disabled": false
+    },
+    {
+      "task_key": "Persist_Bronze_Layer",
+      "depends_on": [
+        {
+          "task_key": "Bronze_Layer"
+        }
+      ],
+      "run_if": "ALL_SUCCESS",
+      "notebook_task": {
+        "notebook_path": "/Workspace/E-Commerce Project/Persist Bronze Layer",
+        "source": "WORKSPACE"
+      },
+      "timeout_seconds": 0,
+      "email_notifications": {},
+      "webhook_notifications": {},
+      "disabled": false
+    },
+    {
+      "task_key": "Silver_Layer",
+      "depends_on": [
+        {
+          "task_key": "Persist_Bronze_Layer"
+        }
+      ],
+      "run_if": "ALL_SUCCESS",
+      "notebook_task": {
+        "notebook_path": "/Workspace/E-Commerce Project/Silver Layer",
+        "source": "WORKSPACE"
+      },
+      "timeout_seconds": 0,
+      "email_notifications": {},
+      "webhook_notifications": {},
+      "disabled": false
+    },
+    {
+      "task_key": "Persist_Silver_Layer",
+      "depends_on": [
+        {
+          "task_key": "Silver_Layer"
+        }
+      ],
+      "run_if": "ALL_SUCCESS",
+      "notebook_task": {
+        "notebook_path": "/Workspace/E-Commerce Project/Persist Silver Layer",
+        "source": "WORKSPACE"
+      },
+      "timeout_seconds": 0,
+      "email_notifications": {},
+      "webhook_notifications": {},
+      "disabled": false
+    },
+    {
+      "task_key": "Golden_Layer_-_Sales_by_Country",
+      "depends_on": [
+        {
+          "task_key": "Persist_Silver_Layer"
+        }
+      ],
+      "run_if": "ALL_SUCCESS",
+      "notebook_task": {
+        "notebook_path": "/Workspace/E-Commerce Project/Golden Layer - Sales by Country",
+        "source": "WORKSPACE"
+      },
+      "timeout_seconds": 0,
+      "email_notifications": {},
+      "webhook_notifications": {},
+      "disabled": false
+    },
+    {
+      "task_key": "Golden_Layer_-_Sales_by_Month",
+      "depends_on": [
+        {
+          "task_key": "Persist_Silver_Layer"
+        }
+      ],
+      "run_if": "ALL_SUCCESS",
+      "notebook_task": {
+        "notebook_path": "/Workspace/E-Commerce Project/Golden Layer - Sales by Month",
+        "source": "WORKSPACE"
+      },
+      "timeout_seconds": 0,
+      "email_notifications": {},
+      "webhook_notifications": {},
+      "disabled": false
+    },
+    {
+      "task_key": "Golden_Layer_-_Top_Customers",
+      "depends_on": [
+        {
+          "task_key": "Persist_Silver_Layer"
+        }
+      ],
+      "run_if": "ALL_SUCCESS",
+      "notebook_task": {
+        "notebook_path": "/Workspace/E-Commerce Project/Golden Layer - Top Customers",
+        "source": "WORKSPACE"
+      },
+      "timeout_seconds": 0,
+      "email_notifications": {},
+      "disabled": false
+    }
+  ],
+  "format": "MULTI_TASK",
+  "queue": {
+    "enabled": true
+  },
+  "performance_target": "PERFORMANCE_OPTIMIZED"
+}
